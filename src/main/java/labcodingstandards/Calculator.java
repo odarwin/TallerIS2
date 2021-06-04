@@ -1,14 +1,14 @@
-//Copyright (C) 2020\n// All rights reserved
+// Copyright (C) 2020
+// All rights reserved
 
 package labcodingstandards;
 
 import java.util.Scanner;
 
 
-/**
- * @author
- *
- */
+
+ //@author=" "
+ 
 public class Calculator {	
 	//"CHECKSTYLE: ON"
 	public static void main(String[] args) {
@@ -47,14 +47,16 @@ public class Calculator {
         }
 
         Calculator cal=new Calculator();
-        String result=cal.Operation(first,second,operator);
+        double result=cal.Operation(first,second,operator);
 
-        System.out.printf(result);
+        System.out.printf("%f",result);
 		reader.close();
 		
 	}
-	
-	private String Operation(double first,double second,char operator) {
+
+
+	private double Operation(double first,double second,char operator) {
+		
 		double result = 0;
 		switch(operator)
         {
@@ -71,8 +73,8 @@ public class Calculator {
                 result =first/second;
                 break;
             default:
-            	return "Error! operator is not correct";
+            	System.out.print("Error! operator is not correct");
         }
-		return "The result is: "+result;
+		return result;
 	}
 }
